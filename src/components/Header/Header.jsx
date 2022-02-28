@@ -13,7 +13,7 @@ const Header =(props) =>{
      
      <div className='header__list'>
        {props.dataList.map((data,index)=>{
-        return( <Link key={index} to={`/${index}`} className=""><span className='header__list__title' style={{color:props.style.textColor}} >{data.name}</span></Link>)
+        return( <Link key={index} to={`/${index==0?"":index}`} className=""><span className='header__list__title' style={{color:props.style.textColor}} >{data.name}</span></Link>)
        })}
      </div>
     </div>
