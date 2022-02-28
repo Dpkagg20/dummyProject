@@ -24,6 +24,36 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader"
       },
+      
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              query: {
+                name:'assets/[name].[ext]'
+              }
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              query: {
+                mozjpeg: {
+                  progressive: true,
+                },
+                gifsicle: {
+                  interlaced: true,
+                },
+                optipng: {
+                  optimizationLevel: 7,
+                }
+              }
+            }
+          }]
+      
+      } ,
       {
         test: /\.html$/,
         use: "html-loader"
@@ -33,7 +63,21 @@ module.exports = {
       preprocessor, in this case SASS, use the second one*/
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader",{
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              plugins: [
+                [
+                  "postcss-preset-env",
+                  {
+                    // Options
+                  },
+                ],
+              ],
+            },
+          },
+        },],
       },
       {
         test: /\.scss$/,
