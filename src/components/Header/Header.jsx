@@ -4,16 +4,16 @@ import dataList from '../../constants/ceoData'; "../../constants/ceoData.jsx";
 import CeoLogo from "../../assets/ceo_logo.jpeg";
 import { Link } from 'react-router-dom';
 
-const Header =() =>{
-  console.log(dataList);
+const Header =(props) =>{
+  console.log(props.dataList);
   return (
-    <div className="header">
+    <div className="header" style={{backgroundColor:props.style.backgroundColor}}>
     
-       <img src={CeoLogo} className="header__logo" />
+       <img src={props.logo} className="header__logo" />
      
      <div className='header__list'>
-       {dataList.map((data,index)=>{
-        return( <Link to={`/${index}`} className=""><span className='header__list__title' >{data.name}</span></Link>)
+       {props.dataList.map((data,index)=>{
+        return( <Link key={index} to={`/${index}`} className=""><span className='header__list__title' style={{color:props.style.textColor}} >{data.name}</span></Link>)
        })}
      </div>
     </div>

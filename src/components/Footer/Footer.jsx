@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import "./Footer.css";
-const Footer= ()=> {
+const Footer= (props)=> {
   return <>
-  <div className='footer'>
-    <Link to="/about-us"><span className='footer__title'>About us</span></Link> 
-    <Link to="/contact-us"><span className='footer__title'>Contact us</span></Link>
+  <div className='footer' style={{backgroundColor:props.style.backgroundColor}}>
+    <Link to="/about-us"><span className='footer__title' style={{color:props.style.textColor}}>About us</span></Link> 
+    <Link to="/contact-us"><span className='footer__title' style={{color:props.style.textColor}}>Contact us</span></Link>
   </div>
   </>;
 

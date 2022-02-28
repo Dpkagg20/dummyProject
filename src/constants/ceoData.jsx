@@ -1,4 +1,4 @@
-const dataList=[
+const ceoDataList=[
     {
         "name" : "Jeff Bezos",
         "company" : "Amazon",
@@ -36,4 +36,4 @@ const dataList=[
     }
 ];
 
-export default dataList;
+export default ceoDataList;

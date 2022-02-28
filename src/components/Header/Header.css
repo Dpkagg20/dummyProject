@@ -3,7 +3,7 @@
     align-items: center;
     /* justify-content: center; */
     height: 80px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 .header__logo{
        /* margin: 5px; */
@@ -26,7 +26,7 @@
 }
 
 .header__list__title{
-    color: #fff;
+    /* color: #fff; */
     font-size: 18px;
   
 
