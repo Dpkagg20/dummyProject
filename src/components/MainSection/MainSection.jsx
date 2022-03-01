@@ -1,17 +1,19 @@
 import React from 'react'
 import dataList from '../../constants/ceoData'
-import "./MainSection.css";
 
-export default function MainSection() {
+import "./MainSection.scss";
+
+const MainSection=(props)=> {
+ 
   return (
-    <div className='mainsection'>
+    <div className='mainsection' style={{backgroundColor:props.style.backgroundColor}}>
         <div className='flex-container'>
           <div>
-          <img style={{width:"300px",height:"400px"}} src='https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg'/>
+          <img style={{width:"300px",height:"400px"}} src={props.dataList.image}/>
           </div>
           <div>
-          <h1>Name :{dataList[0].name}</h1>
-          <h1>Job : {dataList[0].job}</h1>
+          <h1 style={{color:props.style.textColor}}>{props.keys[0]} :{props.dataList[props.keys[0]]}</h1>
+          <h1 style={{color:props.style.textColor}}>{props.keys[1]} : {props.dataList[props.keys[1]]}</h1>
           {/* <h2>Description : {dataList[0].description}</h2> */}
           </div>
          
@@ -20,3 +22,5 @@ export default function MainSection() {
     </div>
   )
 }
+
+export default MainSection;

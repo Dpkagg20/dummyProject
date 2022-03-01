@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Header.css";
+import "./Header.scss";
 import dataList from '../../constants/ceoData'; "../../constants/ceoData.jsx";
 import CeoLogo from "../../assets/ceo_logo.jpeg";
 import { Link } from 'react-router-dom';
