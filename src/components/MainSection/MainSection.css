@@ -1,0 +1,16 @@
+.mainsection{
+    background-color: blue;
+    color: pink;
+    width: 100%;
+    height: 100vmin;
+    margin: auto;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    margin-left: 20px;
+    padding:100px 150px ;
+    
+}
