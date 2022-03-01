@@ -4,16 +4,19 @@
     width: 100%;
     min-height: calc(100vh - 115px);
     margin: auto;
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        margin-left: 20px;
+        padding:100px 150px ;
+        gap: 30px; 
+        h1{
+            &::first-letter{
+                text-transform:capitalize;
+            }
+        }
+    }
 }
-.flex-container{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
-    margin-left: 20px;
-    padding:100px 150px ;
-    gap: 30px;    
-}
-h1::first-letter {
-    text-transform:capitalize;
-}
+

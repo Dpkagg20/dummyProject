@@ -7,7 +7,7 @@ const MainSection=(props)=> {
  
   return (
     <div className='mainsection' style={{backgroundColor:props.style.backgroundColor}}>
-        <div className='flex-container'>
+        <div className='mainsection__container'>
           <div>
           <img style={{width:"300px",height:"400px"}} src={props.dataList.image}/>
           </div>

@@ -1,23 +1,16 @@
 .footer{
     display: flex;
-   
-   /* height: 35px; */
-   /* background-color: pink; */
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   /* color: white; */
-  padding-top: 10px;
-  padding-bottom: 10px;
-  
-   justify-content: flex-end;
-}
-
-.footer__title{
-   
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 15px;
-    font-size: 13px;
-    /* color: #fff; */
-    margin-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    &__title{
+        height: 15px;
+        font-size: 13px;
+        margin-right: 50px;
+    }
 }
