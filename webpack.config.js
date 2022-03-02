@@ -122,15 +122,11 @@ module.exports = {
     ], 
   },  
   plugins: [
-    new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html'),}),
+    new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html')}),
     new MiniCssExtractPlugin({
       filename: "bundle.css"
     })
   
   ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    hot: true
- }
+  
 }
