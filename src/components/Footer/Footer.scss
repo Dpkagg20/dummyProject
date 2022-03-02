@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    &__title{
+        height: 15px;
+        font-size: 13px;
+        margin-right: 50px;
+    }
+}

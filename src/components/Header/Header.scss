@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    &__logo{
+        margin-left: 40px;
+        max-width: 60px;
+        height: 50px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 20px;
+        width: 80%;
+        &__title{
+            font-size: 18px;
+        }
+    }
+}
+
+
