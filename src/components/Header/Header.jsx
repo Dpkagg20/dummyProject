@@ -5,7 +5,7 @@ import CeoLogo from "../../assets/ceo_logo.jpeg";
 import { Link } from 'react-router-dom';
 
 const Header =(props) =>{
-  console.log(props.dataList);
+  console.log(props);
   return (
     <div className="header" style={{backgroundColor:props.style.backgroundColor}}>
     

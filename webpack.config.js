@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     // the output bundle won't be optimized for production but suitable for development
@@ -61,35 +62,75 @@ module.exports = {
       /*Choose only one of the following two: if you're using 
       plain CSS, use the first one, and if you're using a
       preprocessor, in this case SASS, use the second one*/
+      // {
+      //   test: /\.css$/,
+      //   use: ["style-loader", "css-loader",{
+      //     loader: "postcss-loader",
+      //     options: {
+      //       postcssOptions: {
+      //         plugins: [
+      //           [
+      //             "postcss-preset-env",
+      //             {
+      //               // Options
+      //             },
+      //           ],
+      //         ],
+      //       },
+      //     },
+      //   },],
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   use:[
+      //     "style-loader",
+      //     "css-loader",
+      //     "sass-loader"
+      //   ],
+      // },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader",{
-          loader: "postcss-loader",
-          options: {
-            postcssOptions: {
-              plugins: [
-                [
-                  "postcss-preset-env",
-                  {
-                    // Options
-                  },
-                ],
-              ],
-            },
-          },
-        },],
-      },
-      {
-        test: /\.scss$/,
-        use:[
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
-      },
+        // Apply rule for .sass, .scss or .css files
+      test: /\.(sa|sc|c)ss$/,
+
+      // Set loaders to transform files.
+      // Loaders are applying from right to left(!)
+      // The first loader will be applied after others
+      use: [
+        {
+          // After all CSS loaders, we use a plugin to do its work.
+          // It gets all transformed CSS and extracts it into separate
+          // single bundled file
+          loader: MiniCssExtractPlugin.loader,
+        }, 
+             {
+               // This loader resolves url() and @imports inside CSS
+               loader: "css-loader",
+             },
+             {
+               // Then we apply postCSS fixes like autoprefixer and minifying
+               loader: "postcss-loader"
+             },
+             {
+               // First we transform SASS to standard CSS
+               loader: "sass-loader",
+               options: {
+                 implementation: require("sass")
+               }
+             }
+           ]
+      }
     ], 
   },  
   plugins: [
-    new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') }),
-  ]
+    new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html'),}),
+    new MiniCssExtractPlugin({
+      filename: "bundle.css"
+    })
+  
+  ],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
+ }
 }

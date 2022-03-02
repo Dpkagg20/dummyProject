@@ -11,4 +11,4 @@ const appRouting = (
   </Router>
 );
 
-ReactDOM.render(appRouting, document.getElementById("root"));
+ReactDOM.render(<App/>, document.getElementById("root"));
