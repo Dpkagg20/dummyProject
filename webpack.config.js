@@ -24,6 +24,20 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader"
       },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
+      },
       
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -79,14 +93,14 @@ module.exports = {
           },
         },],
       },
-      {
-        test: /\.scss$/,
-        use:[
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
-      },
+      // {
+      //   test: /\.scss$/,
+      //   use:[
+      //     "style-loader",
+      //     "css-loader",
+      //     "sass-loader"
+      //   ],
+      // },
     ], 
   },  
   plugins: [

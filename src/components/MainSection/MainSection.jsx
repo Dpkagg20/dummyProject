@@ -3,6 +3,7 @@ import dataList from '../../constants/ceoData'
 import "./MainSection.css";
 
 export default function MainSection() {
+  
   return (
     <div className='mainsection'>
         <div className='flex-container'>

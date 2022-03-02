@@ -9,10 +9,11 @@ import { styles,logos,titles } from "./constants/utils.jsx";
 import pokemonDataList from "./constants/pokemonData.jsx";
 import celebrityDataList from "./constants/celebrityData.jsx";
 import AboutUs from "./components/AboutUs/AboutUs.jsx";
+import ContactUs from "./components/ContactUs/ContactUs.jsx";
 
 
 const App = () => {
-   const i=0;
+   const i=2;
    const dataList=[
       ceoDataList,
       pokemonDataList,
@@ -29,7 +30,7 @@ const App = () => {
          index==0?<Route key={`${titles[i]}_${index}`} exact path={`/`} element={<div>{data.name}</div>} />:<Route key={`${titles[i]}_${index}`} exact path={`/${index}`} element={<div>{data.name}</div>} />
        )}
        <Route exact path="/about-us" element={<AboutUs style={styles[i].main}/>}/>
-       <Route exact path="/contact-us" element={<div>Contact Us</div>}/>
+       <Route exact path="/contact-us" element={<ContactUs style={styles[i].main}/>}/>
     </Routes>
  <Footer style={styles[i].footer}/>
  </>
