@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "start:pokemon": "webpack-dev-server --mode development --env=APP_TYPE='pokemon'",
+    "start:ceo": "webpack-dev-server --env=APP_TYPE='ceo'",
+    "start:celebrity": "webpack-dev-server --env=APP_TYPE='celebrities'",
+    "build:pokemon": "webpack --env=APP_TYPE='pokemon'",
+    "build:ceo": "webpack --env=APP_TYPE='ceo'",
+    "build:celebrity": "webpack --env=APP_TYPE='celebrities'"
   },
   "repository": {
     "type": "git",
@@ -34,6 +38,7 @@
     "cssnano": "^5.0.17",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
+    "html-replace-webpack-plugin": "^2.6.0",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",
     "mini-css-extract-plugin": "^2.5.3",

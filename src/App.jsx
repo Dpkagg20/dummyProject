@@ -9,6 +9,8 @@ import pokemonDataList from "./constants/pokemonData.jsx";
 import celebrityDataList from "./constants/celebrityData.jsx";
 import MainSection from "./components/MainSection/MainSection.jsx";
 import Layout from "./components/Layout/Layout.jsx";
+import ContactUs from "./components/ContactUs/ContactUs.jsx";
+import AboutUs from "./components/AboutUs/AboutUs.jsx";
 
 
 const App = () => {
@@ -19,22 +21,22 @@ const App = () => {
       celebrityDataList
    ];
    console.log(titles);
-  useEffect(()=>{
-   document.title=titles[i];
-  },[])
+//   useEffect(()=>{
+//    document.title=titles[i];
+//   },[])
  return <>
  <BrowserRouter>
     <Routes>
-       {dataList[i]?.map((data,index) =>
-        <Route key={`${titles[i]}_${index}`} exact path={`/${index==0?"":index}`} element={<Layout dataList={dataList[i]} i={i}>
-       <MainSection dataList={data} style={styles[i].main} keys={keys[i]}/>
+       {APP_CONFIG.dataList?.map((data,index) =>
+        <Route key={`${APP_CONFIG.title}_${index}`} exact path={`/${index==0?"":index}`} element={<Layout dataList={APP_CONFIG.dataList} i={i}>
+       <MainSection dataList={data} style={APP_CONFIG.colors.main} keys={APP_CONFIG.keys}/>
         </Layout> } />
        )}
-       <Route exact path="/about-us" element={<Layout dataList={dataList[i]} i={i}>
-       <div>About Us</div>
+       <Route exact path="/about-us" element={<Layout dataList={APP_CONFIG.dataList} i={i}>
+      <AboutUs style={APP_CONFIG.colors.main}/>
        </Layout>}/>
-       <Route exact path="/contact-us" element={<Layout dataList={dataList[i]} i={i}>
-       <div>Contact Us</div>
+       <Route exact path="/contact-us" element={<Layout dataList={APP_CONFIG.dataList} i={i}>
+      <ContactUs style={APP_CONFIG.colors.main}/>
        </Layout>}/>
        <Route path="/*" element={<div>Uni</div>}/>
     </Routes>

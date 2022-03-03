@@ -6,9 +6,9 @@ import Header from '../Header/Header.jsx';
 const Layout = (props)=> {
     console.log(props.childern);
   return <>
-  <Header dataList={props.dataList} logo={logos[props.i]} style={styles[props.i].header}/>
+  <Header dataList={APP_CONFIG.dataList} logo={APP_CONFIG.logo} style={APP_CONFIG.colors.header}/>
   {props.children}
- <Footer style={styles[props.i].footer}/>
+ <Footer style={APP_CONFIG.colors.footer}/>
   </>
 }
 
