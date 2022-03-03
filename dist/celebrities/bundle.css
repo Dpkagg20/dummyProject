@@ -1,0 +1,24 @@
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/Header/Header.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.header{align-items:center;display:flex;height:80px}.header__logo{height:50px;margin-left:40px;max-width:60px}.header__list{align-items:center;display:flex;height:20px;justify-content:space-around;width:80%}.header__list__title{font-size:18px}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/Footer/Footer.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+.footer{bottom:0;display:flex;height:15px;justify-content:flex-end;left:0;padding-bottom:10px;padding-top:10px;position:fixed;width:100%}.footer__title{font-size:13px;height:15px;margin-right:50px}
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/MainSection/MainSection.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.mainsection{margin:auto;min-height:calc(100vh - 115px);width:100%}.mainsection__container{align-items:center;display:flex;flex-direction:row;gap:30px;justify-content:space-around;margin-left:20px;padding:100px 150px}.mainsection__container h1:first-letter{text-transform:capitalize}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/ContactUs/ContactUs.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+.contactus{margin:auto;min-height:calc(100vh - 115px);width:100%}.contactus__content{padding:100px}
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/AboutUs/AboutUs.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+.aboutus{min-height:calc(100vh - 115px);width:100%}.aboutus__content{padding:100px}
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/index.scss ***!
+  \*******************************************************************************************************************************************************************************/
+*{margin:0;padding:0}a{text-decoration:none}
