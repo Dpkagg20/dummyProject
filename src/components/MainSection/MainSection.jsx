@@ -41,7 +41,7 @@ const changeData=()=>{
           Name
         </label>
         <input type='text' 
-        style={{ color: APP_CONFIG.colors.main.backgroundColor}}
+        style={{ color:APP_CONFIG.title=="Pokemons"?"#000": APP_CONFIG.colors.main.backgroundColor}}
         value={name} onChange={(event)=>setName(event.target.value)}
         />
         </div>
@@ -49,7 +49,7 @@ const changeData=()=>{
         <label>
         Profile Url
         </label>
-        <input type='text' style={{ color: APP_CONFIG.colors.main.backgroundColor}} 
+        <input type='text' style={{ color:APP_CONFIG.title=="Pokemons"?"#000": APP_CONFIG.colors.main.backgroundColor}} 
         value={profileUrl} onChange={(event)=>setProfileUrl(event.target.value)}
         />
         </div>
@@ -58,7 +58,7 @@ const changeData=()=>{
          {props.keys[1]}
         </label>
         <input type='text'
-        style={{ color: APP_CONFIG.colors.main.backgroundColor}}
+        style={{ color:APP_CONFIG.title=="Pokemons"?"#000": APP_CONFIG.colors.main.backgroundColor}}
         value={job} onChange={(event)=>setJob(event.target.value)}/>
         </div>
         <div className="mainsection__form__btn">
