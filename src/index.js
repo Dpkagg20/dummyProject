@@ -1,12 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App.jsx";
+import { Provider } from "react-redux";
+import store from "./store";
 import "./index.scss";
-console.log('gurinder', APP_TYPE, APP_CONFIG );
 const appRouting = (
-  <Router>
-  <App/>
-  </Router>
+
+  <Provider store={store}>
+{/* <BrowserRouter> */}
+<App/>
+{/* </BrowserRouter> */}
+</Provider>
+
+ 
 );
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(appRouting, document.getElementById("root"));
