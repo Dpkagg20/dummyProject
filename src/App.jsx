@@ -49,7 +49,7 @@ const App = (props) => {
                 element={
                   <Layout  dataList={dataList}>
                     <MainSection
-                     
+                     key={index}
                       // updateDataProfile={props.updateDataProfile}
                       changeDataList={changeDataList}
                       dataList={data}
@@ -65,8 +65,8 @@ const App = (props) => {
               exact
               path="/about-us"
               element={
-                <Layout key={uuidv4()} dataList={dataList}>
-                  <AboutUs key={uuidv4()} style={APP_CONFIG.colors.main} />
+                <Layout  dataList={dataList}>
+                  <AboutUs  style={APP_CONFIG.colors.main} />
                 </Layout>
               }
             />
@@ -74,8 +74,8 @@ const App = (props) => {
               exact
               path="/contact-us"
               element={
-                <Layout key={uuidv4()} dataList={dataList}>
-                  <ContactUs key={uuidv4()} style={APP_CONFIG.colors.main} />
+                <Layout dataList={dataList}>
+                  <ContactUs style={APP_CONFIG.colors.main} />
                 </Layout>
               }
             />

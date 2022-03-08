@@ -11,18 +11,18 @@ const ContactUs=(props)=> {
   }]
   return (
     <div className='contactus' style={{backgroundColor:props.style.backgroundColor}}>
-           <div style={{color:props.style.textColor}} className='contactus__content' >
-             <h1>Click on the celebrity name to go to their twitter profile</h1>
+           <div className='contactus__content' >
+             <h1 style={{color:props.style.textColor}} >Click on the celebrity name to go to their twitter profile</h1>
              <br></br>
-             <h2><a href={twitterLinks[0].emmawatson}>Emma Watson</a></h2>
+             <h2 ><a style={{color:props.style.textColor}}  href={twitterLinks[0].emmawatson}>Emma Watson</a></h2>
              <br></br>
-             <h2><a href={twitterLinks[0].johnnydepp}>Johnnydeep</a></h2>
+             <h2><a style={{color:props.style.textColor}}  href={twitterLinks[0].johnnydepp}>Johnnydeep</a></h2>
              <br></br>
-             <h2><a href={twitterLinks[0].bradpitt}>Brad Pitt</a></h2>
+             <h2><a style={{color:props.style.textColor}}  href={twitterLinks[0].bradpitt}>Brad Pitt</a></h2>
              <br></br>
-             <h2><a href={twitterLinks[0].charleschaplin}>Charles Chaplin</a></h2>
+             <h2><a style={{color:props.style.textColor}}  href={twitterLinks[0].charleschaplin}>Charles Chaplin</a></h2>
              <br></br>
-             <h2><a href={twitterLinks[0].morganfreeman}>Morgan Freeman</a></h2>
+             <h2><a style={{color:props.style.textColor}} href={twitterLinks[0].morganfreeman}>Morgan Freeman</a></h2>
             </div>
       </div>
   )
