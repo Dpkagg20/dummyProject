@@ -4,22 +4,25 @@ import store from "../../store";
 import "./MainSection.scss";
 
 const MainSection = (props) => {
+
   const [edit, setEdit] = useState(false);
-  const [name, setName] = useState();
-  const [profileUrl, setProfileUrl] = useState();
-  const [job, setJob] = useState();
+  const [name, setName] = useState(props.dataList[props.keys[0]]);
+  const [profileUrl, setProfileUrl] = useState(props.dataList.image);
+  const [job, setJob] = useState(props.dataList[props.keys[1]]);
   // console.log("###",props);
-  useEffect(() => {
-    setName(props.dataList[props.keys[0]]);
-    setJob(props.dataList[props.keys[1]]);
-    setProfileUrl(props.dataList.image);
-  }, [props.dataList]);
+  // useEffect(() => {
+  //   setName(props.dataList[props.keys[0]]);
+  //   setJob(props.dataList[props.keys[1]]);
+  //   setProfileUrl(props.dataList.image);
+  // }, [props]);
 
   const changeData = () => {
-    props.dataList[props.keys[0]] = name;
-    props.dataList[props.keys[1]] = job;
-    props.dataList.image = profileUrl;
-    props.updateDataProfile(props.i, props.dataList);
+    let dataList = props.dataList;
+    dataList[props.keys[0]] = name;
+    dataList[props.keys[1]] = job;
+    dataList.image = profileUrl;
+    // props.updateDataProfile(props.i, props.dataList);
+    props.changeDataList(props.i, dataList);
     // setName("");
     // setJob("");
     // setProfileUrl("");
@@ -113,7 +116,7 @@ const MainSection = (props) => {
                 onClick={() => {
                   // APP_CONFIG.dataList[1].name="name";
                   setEdit(!edit);
-                  console.log("data", APP_CONFIG.dataList[0].name);
+                  console.log("data", APP_CONFIG.dataList[props.i].name);
                 }}
               >
                 Edit

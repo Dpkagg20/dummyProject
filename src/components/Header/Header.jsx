@@ -8,11 +8,13 @@ import store from "../../store";
 import { v4 as uuidv4 } from "uuid";
 
 const Header = (props) => {
-  console.log("Header", store.getState());
+  // const [dataList,setDataList]= useState(props.dataList)
+  // console.log("Header", store.getState());
 
-  useEffect(() => {
-    console.log("headerp", props);
-  }, [props.dataList]);
+  // useEffect(() => {
+  //   setDataList(props.dataList);
+  //   console.log("h-changed");
+  // }, [props]);
 
   return (
     <div
@@ -22,7 +24,7 @@ const Header = (props) => {
       <img src={props.logo} className="header__logo" />
 
       <div className="header__list">
-        {store.getState().dataList.map((data, index) => {
+        {props.dataList.map((data, index) => {
           return (
             <Link
               key={uuidv4()}
