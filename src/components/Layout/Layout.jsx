@@ -17,13 +17,13 @@ const Layout = (props) => {
   return (
     <>
       <Header
-        key={uuidv4()}
+       
         dataList={props.dataList}
         logo={APP_CONFIG.logo}
         style={APP_CONFIG.colors.header}
       />
       {props.children}
-      <Footer key={uuidv4()} style={APP_CONFIG.colors.footer} />
+      <Footer style={APP_CONFIG.colors.footer} />
     </>
   );
 };

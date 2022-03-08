@@ -26,6 +26,8 @@ const MainSection = (props) => {
     // setName("");
     // setJob("");
     // setProfileUrl("");
+    
+
   };
 
   return (
@@ -90,8 +92,8 @@ const MainSection = (props) => {
                       backgroundColor: APP_CONFIG.colors.header.backgroundColor,
                       color: APP_CONFIG.colors.header.textColor,
                     }}
-                    onClick={(e) => {
-                      e.preventDefault();
+                    onClick={() => {
+                      // e.preventDefault();
                       // APP_CONFIG.dataList[1].name="name";
                       setEdit(!edit);
                       changeData();

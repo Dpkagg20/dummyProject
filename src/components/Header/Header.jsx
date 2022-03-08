@@ -16,6 +16,7 @@ const Header = (props) => {
   //   console.log("h-changed");
   // }, [props]);
 
+  
   return (
     <div
       className="header"
@@ -27,7 +28,7 @@ const Header = (props) => {
         {props.dataList.map((data, index) => {
           return (
             <Link
-              key={uuidv4()}
+              key={index}
               to={`/${index == 0 ? "" : index}`}
               className=""
             >

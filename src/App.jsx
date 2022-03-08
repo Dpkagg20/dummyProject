@@ -18,14 +18,18 @@ import { v4 as uuidv4 } from "uuid";
 
 const App = (props) => {
   const [dataList,setDataList]= useState(APP_CONFIG.dataList);
+
+
+  
   console.log("appp", props);
   console.log("change data",dataList);
   const changeDataList=(index,data)=>{
     let datalists = dataList;
     datalists[index]=data;
-    setDataList(datalists);
+    setDataList([...datalists]);
     console.log("change da",dataList);
     // return datalists;
+   
   }
   console.log("changed");
   // useEffect(() => {
@@ -39,13 +43,13 @@ const App = (props) => {
           <Routes>
             {dataList?.map((data, index) => (
               <Route
-                key={`${APP_CONFIG.title}_${uuidv4()}`}
+                key={`${APP_CONFIG.title}_${index}`}
                 exact
                 path={`/${index == 0 ? "" : index}`}
                 element={
-                  <Layout key={uuidv4()} dataList={dataList}>
+                  <Layout  dataList={dataList}>
                     <MainSection
-                      key={uuidv4()}
+                     
                       // updateDataProfile={props.updateDataProfile}
                       changeDataList={changeDataList}
                       dataList={data}
